@@ -25,7 +25,7 @@ Term: Fall 2018
   + Zhibo Zhou : Designed and wrote "Error Detection" part and "Data clearning" part. Searched different kinds of papers that       relate to this project and draw the ppt for presentation.
   + Peilin Li : Designed and wrote "Error Detection" part and "Data clearning" part. Searched different kinds of papers on those two parts. 
   
-+Equal contribution：
++ Equal contribution：
   + Ghada Jerfel : Designed and wrote "Performance Measurement" and edited the readme file.
   + Xiaoyi Li: Designed and wrote "Performance Measurement" and edited the readme file.
   
