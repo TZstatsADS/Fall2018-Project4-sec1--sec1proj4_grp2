@@ -6,7 +6,7 @@
 
 Term: Fall 2018
 
-+ Team #
++ Team #2
 + Team members
 	+ Ghada Jerfel 
 	+ Peilin Li
