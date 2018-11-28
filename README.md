@@ -18,8 +18,15 @@ Term: Fall 2018
 	
 **Contribution statement**: 
 + project leader
-  + Hengyang Lin: Designed and organized the structure of whole project. Build Error detection part and Error correction part.
+  + Hengyang Lin: Designed and organized the structure of whole project. Build "Error detection" part and "Error correction" part. Searched different kinds of paper that relate to this project
   
++ Major contributor:
+  + Zhibo Zhou : Designed and wrote "Error Detection" part and "Data clearning" part. Searched different kinds of papers that       related to this project and draw the ppt for presentation.
+  + Peilin Li : Designed and wrote "Error Detection" part and "Data clearning" part. Searched different kinds of papers on those two parts. 
+  
++Equal contribution：
+  + Ghada Jerfel : Designed and wrote "Performance Measurement" and edited the readme file.
+  + Xiaoyi Li: Designed and wrote "Performance Measurement" and edited the readme file.
   
 
 
