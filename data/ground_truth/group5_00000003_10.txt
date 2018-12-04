@@ -1,4 +1,4 @@
-characteristics, and transport of contaminants.
+﻿characteristics, and transport of contaminants.
 Ebr states where groundwater
 quantity is a concern, this may not be separable from the quality issue. States
 may choose to regulate the withdrawal of groundwater as may be appropriate to
@@ -497,7 +497,6 @@ This group will be
 holding its third meeting next week, and seems well on the way to
 creating an informative and constructive session.
 CMA 038406
-6
 For the coining year, we plan:
 to continue the programs already in place, especially those
 related to the NEC and the two forums planned.

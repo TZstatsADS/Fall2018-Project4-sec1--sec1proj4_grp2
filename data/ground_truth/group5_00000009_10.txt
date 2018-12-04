@@ -1,4 +1,4 @@
-Publication of a Notice of Proposed Rulemaking
+﻿Publication of a Notice of Proposed Rulemaking
 is expected in May 1986.
 Testing requirements will be based on a finding of potentially
 substantial human exposure.
@@ -461,7 +461,6 @@ extent necessary to maintain their qualified status.
 Such amendments
 would be subsequently, reported to the Employee Benefits Committee and
 Board for Review.
-I
 ACTION REQUESTED
 Approval of Recommendation and Resolution C.
 Attachments

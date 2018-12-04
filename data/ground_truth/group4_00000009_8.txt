@@ -1,4 +1,4 @@
-CMA has sent to every Senator and every House Member a letter in opposition
+﻿CMA has sent to every Senator and every House Member a letter in opposition
 to freezing of natural gas wellhead prices and extending of price controls. As
 part of a coalition effort, we are also meeting with key Senators to discuss
 the deficiencies of existing law regarding natural gas and the need to deal with
@@ -676,5 +676,4 @@ f
 i
 i
 CMA
-i
 CMA 038066

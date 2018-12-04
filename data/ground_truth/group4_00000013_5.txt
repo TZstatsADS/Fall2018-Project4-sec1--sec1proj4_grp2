@@ -1,4 +1,4 @@
-CMA
+﻿CMA
 CMA 038193
 EXHIBIT G
 REPORT OF THE DIRECTOR OF COMMUNICATIONS
@@ -889,7 +889,5 @@ do business about requirements.
 The Pennsylvania Chemical industry Council has been very active
 on this issue and will be the coordinating mechanism for future action
 on this bill as it becomes necessary.
-f
-I
 CMA
 CMA 038212
