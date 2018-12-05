@@ -30,8 +30,8 @@ Term: Fall 2018
   + Hengyang Lin: Designed and organized the structure of the whole project. Built "Computation of confusion probability matrix" part, "Typo detection" part, "Typo correction" part and "Improvement". Searched different kinds of papers that relate to this project.
   
 + Major contributor:
-  + Zhibo Zhou : Designed and wrote "Typo Detection" part and "Lines alignment" part, contributed to "Computation of confusion probability matrix" part. Searched different kinds of papers that relate to this project. Presentation.
-  + Peilin Li : Designed and wrote "Typo Detection" part and "Lines alignment" part, contributed to "Computation of confusion probability matrix" part. Searched different kinds of papers relating to those two parts. Scheduled meetings.
+  + Zhibo Zhou : Designed and wrote "Lines alignment" part and "Typo Detection" part, contributed to "Computation of confusion probability matrix" part. Searched different kinds of papers that relate to this project. Presentation.
+  + Peilin Li : Designed and wrote "Lines alignment" part and "Typo Detection" part, contributed to "Computation of confusion probability matrix" part. Searched different kinds of papers relating to those two parts. Scheduled meetings.
   
 + Equal contribution：
   + Ghada Jerfel : Designed and wrote "Performance Measurement" and edited the readme file.
