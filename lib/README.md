@@ -7,6 +7,7 @@ The lib directory contains various files with function definitions and code.
 #### preprocess.R:   for lines and characters alignment
 
 -- computing the number of lines in a given text file
+
 -- computing the number of tokens in given text vectors.
 
 
