@@ -18,8 +18,7 @@ Term: Fall 2018
 ![screenshot](figs/proj4.png)
 
 + Project performance:
-![screenshot](figs/word_eval.png)
-![screenshot](figs/char_eval.png)
+![screenshot](figs/evaluation.png)
 
 **Contribution statement**: 
 + Project Leader：
