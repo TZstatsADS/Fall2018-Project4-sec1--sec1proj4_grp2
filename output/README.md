@@ -13,7 +13,7 @@ prediction: Documents that predicted by our correction program.
 ground_truth_tk: Documents consisted of corresponding tokens with same length compared to tesseract. 
 (For confusion probability)
 
-ground_truth_tk: Documents consisted of corresponding tokens with same length compared to ground truth. 
+ground_truth_tk: Documents consisted of corresponding tokens with same length compared to ground truth.
 (For confusion probability)
 
 .Rdata file: Some R ojbects that need much time to generate. We store them here and we load it directly in R code chunks when we need it.
