@@ -14,16 +14,16 @@ Term: Fall 2018
 	+ Hengyang Lin
 	+ Zhibo Zhou
 
-+ Project summary: In this project, we created an OCR post-processing procedure to enhance Tesseract OCR output. There are four parts in our project. The first one is data cleaning, we removed punctuation and numbers for each file, then we compared with ground-truth by rows, deleted rows that contain different number of words. The second part is error detection；there are 8 rules that we used as our algorithm based on paper D1 section 2.2. The third part is error correction. Here，we first propose candidates for correct words, next we compute a score for each candidate, and last we correct the word with the one that has the highest scores. The final step is performance measurement.
++ Project summary: In this project, we created an OCR post-processing procedure to enhance Tesseract OCR output. There are four parts in our project. The first one is data cleaning and computing confusion probability matrix. We make sure that lines are corresponded, and use tokens with same length which make characters paired to compute ratio of number of letter_i printed by OCR over number of letter_j in ground truth. The second part is typo detection；there are 8 rules that we used as our algorithm based on paper D1 section 2.2. We personally add one more rule: Detect all words with a consonant followed by letter "l" as garbage words, which is a important feature of garbage words we found in tesseract. The third part is typo correction. Here，we first propose candidates for garbage words, next we compute a score for each candidate based on both topic model probability from that document's clean words and confusion probability, and last we correct the word with the one that has the highest scores. The fourth step is performance measurement. We perfrom both word wise evaluation which is sensitive to upper case letters, and character wise evaluation which is sensitive to upper case letters and considers orders of letters. The fifth parth is improvement, which is to use iteration to improve correction. If a file was processed, then the processed file contains more correct words, which help to improve the topic model part, which means we could perform a new round of detection and correction on the processed file.
 ![screenshot](figs/project4.png)
 	
 **Contribution statement**: 
 + Project Leader：
-  + Hengyang Lin: Designed and organized the structure of the whole project. Built "Error detection" part and "Error correction" part. Searched different kinds of papers that relate to this project.
+  + Hengyang Lin: Designed and organized the structure of the whole project. Built "Computation of confusion probability matrix" part, "Typo detection" part, "Typo correction" part and "Improvement". Searched different kinds of papers that relate to this project.
   
 + Major contributor:
-  + Zhibo Zhou : Designed and wrote "Error Detection" part and "Data cleaning" part. Searched different kinds of papers that       relate to this project and prepared the presentation.
-  + Peilin Li : Designed and wrote "Error Detection" part and "Data cleaning" part. Searched different kinds of papers relating to those two parts. 
+  + Zhibo Zhou : Designed and wrote "Typo Detection" part and "Data cleaning" part, contributed to "Computation of confusion probability matrix" part. Searched different kinds of papers that relate to this project. Presentation.
+  + Peilin Li : Designed and wrote "Typo Detection" part and "Data cleaning" part, contributed to "Computation of confusion probability matrix" part. Searched different kinds of papers relating to those two parts. Scheduled meetings.
   
 + Equal contribution：
   + Ghada Jerfel : Designed and wrote "Performance Measurement" and edited the readme file.
