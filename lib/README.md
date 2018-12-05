@@ -6,7 +6,8 @@ The lib directory contains various files with function definitions and code.
 
 #### preprocess.R:   for lines and characters alignment
 
--- computing number of lines or number of tokens in each line for each text file. 
+-- computing the number of lines in a given text file
+-- computing the number of tokens in given text vectors.
 
 
 #### confusion_prob_matrix.R:   for computation of confusion probabilit matrix
