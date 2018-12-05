@@ -2,7 +2,7 @@
 
 ### Code lib Folder
 
-#### The lib directory contains various files with function definitions and code.
+The lib directory contains various files with function definitions and code.
 
 #### preprocess.R:   for lines and characters alignment
 
