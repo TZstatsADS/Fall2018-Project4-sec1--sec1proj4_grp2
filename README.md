@@ -7,7 +7,7 @@
 Term: Fall 2018
 
 + Team #2
-+ Team members -- UNI
++ Team members: Name -- UNI
 	+ Ghada Jerfel 
 	+ Peilin Li
 	+ Xiaoyi Li
