@@ -22,7 +22,7 @@ Term: Fall 2018
   + The fifth part is **improvement**, which is to use iteration to improve correction. If a file was processed, then the processed file contains more correct words, which help to improve the topic model part, which means we could perform a new round of detection and correction on the processed file.
 ![screenshot](figs/proj4.png)
 
-+ For details, explanations and ideas, please download doc/main.nb.html to view.
++ Project details, explanations and ideas: Please download doc/main.nb.html to view.
 
 + Project performance:
 ![screenshot](figs/evaluation.png)
