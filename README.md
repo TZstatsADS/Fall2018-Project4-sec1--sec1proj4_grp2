@@ -15,13 +15,14 @@ Term: Fall 2018
 	+ Zhibo Zhou
 
 + Project summary: In this project, we created an OCR post-processing procedure to enhance Tesseract OCR output.
-  + (For details, explanations and ideas, please download doc/main.nb.html to view.)
   + The first part is **Lines alignment and computing confusion probability matrix**. We make sure that lines are corresponded, and use tokens with same length which make characters paired to compute ratio of number of letter_i printed by OCR over number of letter_j in ground truth.
   + The second part is **typo detection**: We implemented 8 rulse based on paper D1 section 2.2. And we personally add one more rule: Detect all words with a consonant followed by letter "l" as garbage words, which is a important feature of garbage words we found in tesseract.
   + The third part is **typo correction**. Here，we first propose candidates for a garbage word, next we compute a score for each candidate based on both topic model probability from that document's clean words and confusion probability, and then we correct the word with the candidates that has the highest score.
   + The fourth part is **evaluation**. We perfrom both word wise evaluation which is sensitive to upper case letters, and character wise evaluation which is sensitive to upper case letters and considers orders of letters.
   + The fifth part is **improvement**, which is to use iteration to improve correction. If a file was processed, then the processed file contains more correct words, which help to improve the topic model part, which means we could perform a new round of detection and correction on the processed file.
 ![screenshot](figs/proj4.png)
+
++ For details, explanations and ideas, please download doc/main.nb.html to view.
 
 + Project performance:
 ![screenshot](figs/evaluation.png)
