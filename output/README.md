@@ -8,7 +8,7 @@ The output directory contains analysis output, processed datasets, logs, or othe
 
 **tesseract**: Documents consisted of lines with same number of tokens compared to ground truth. (After Lines alignment)
 
-**prediction**: Documents that predicted by our correction program.
+**prediction**: Documents that predicted by our correction program. (First 10 documents only)
 
 **ground_truth_tk**: Documents consisted of corresponding tokens with same length compared to tesseract. 
 (For confusion probability)
