@@ -15,7 +15,7 @@ Term: Fall 2018
 	+ Zhibo Zhou
 
 + Project summary: In this project, we created an OCR post-processing procedure to enhance Tesseract OCR output. There are four parts in our project. The first one is data cleaning, we removed punctuation and numbers for each file, then we compared with ground-truth by rows, deleted rows that contain different number of words. The second part is error detection；there are 8 rules that we used as our algorithm based on paper D1 section 2.2. The third part is error correction. Here，we first propose candidates for correct words, next we compute a score for each candidate, and last we correct the word with the one that has the highest scores. The final step is performance measurement.
-![screenshot](doc/project4.png)
+![screenshot](figs/project4.png)
 	
 **Contribution statement**: 
 + Project Leader：
