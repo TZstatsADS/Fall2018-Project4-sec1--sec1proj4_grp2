@@ -40,7 +40,13 @@ The lib directory contains various files with function definitions and code.
 
 #### correction.R:   for correction a file
 
--- computing scores for candidates
+-- computing confusion score for a candidate word based on confusion probabilities, along with the word's best lower-upper prediction.
+
+-- generating a DocumentTermMatrix for a given tesseract file by using those clean words in it which are detected by detection.
+
+-- computing topic score for a candidate word based on the topic probabilities determined by clean words and word specific probabilities of all topics.
+
+-- computing scores for candidates based on topic score and confusion score, along with the word's best lower-upper prediction.
 
 -- correcting a word
 
