@@ -7,7 +7,7 @@ Adapting published algorithms to address a data problem in your project is a com
 
 **OCR** is a technology that enables you to convert different types of documents (e.g., scanned documents, PDF files or images captured by a digital camera) into editable and searchable data. An OCR system consists of a pre-processing module, a word recognition module and a post-processing module, which are pipelined together to retrieve a relevant scanned document.
 
-![image](ocr_flowchart.png)
+![image](figs/ocr_flowchart.png)
 
 For this project, each team is assigned **a pair of research papers** from the *OCR post-processing* literature. You will study the papers carefully and implement the algorithms, from scratch, in `R`. **Paper assignments will be posted to a piazza post specific to individual teams**. 
 
