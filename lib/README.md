@@ -13,16 +13,20 @@ The lib directory contains various files with function definitions and code.
 
 #### confusion_prob_matrix.R:   for computation of confusion probabilit matrix
 
--- computing confusion probabilit matrix.
+-- computing confusion number of printed letter_i given the true letter_j. (Entries of confusion number matrix.)
+
+-- computing the number of a true letter.
+
+-- computing the confusion number matrix to calculate confusion probability matrix.
 
 
 #### detection.R:    for detection a text
 
 -- detecting words. garbage word --> TRUE, clean word --> FALSE.
 
--- detecting words vectors.
+-- detecting words vectors. output TRUE/FALSE vector with names are tokens.
 
--- detecting files.
+-- detecting files. output TRUE/FALSE vector with names are tokens.
 
 
 #### LDAlist.R:   for LAD model list, which would be used in calculating topic modeling probability for a candidate word
@@ -50,17 +54,17 @@ The lib directory contains various files with function definitions and code.
 
 -- computing scores for candidates based on topic score and confusion score, along with the word's best lower-upper prediction.
 
--- correcting a word
+-- correcting a word by the candidate with highest score.
 
--- correcting a text file
+-- correcting a text file.
 
 
 #### evaluation.R:   for evaluation of predictions
 
--- computing word-wise recall
+-- computing word-wise recall. sensitive to upper case letters.
 
--- computing word-wise precision
+-- computing word-wise precision. sensitive to upper case letters.
 
--- computing character-wise recall
+-- computing character-wise recall. sensitive to upper case letters. order matters. used on token aligned text file.
 
--- computing character-wise precision
+-- computing character-wise precision. sensitive to upper case letters. order matters. used on token aligned text file.
