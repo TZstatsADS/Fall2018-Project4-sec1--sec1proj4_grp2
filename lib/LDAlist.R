@@ -1,4 +1,4 @@
-############ Get A list consists of LDA models, when each was trained by documents other than every document in ground_truth file
+############ Get A list consists of LDA models, where each was trained by documents other than every document in ground_truth file
 
 get_ldamodels <- function(file_loc, n_topics){
   file_names <- list.files(file_loc)

@@ -1,20 +1,7 @@
-########### Coerrect function for a tesseract file.##############################################
-eval_correct_file <- function(docname, detection_list_eval){
-  text_info <- detection_list_eval[[docname]]
-  words_vec <- names(text_info)
-  
-  for(i in 1:length(words_vec)){
-    if(text_info[i]){
-      words_vec[i] <- correct_word(words_vec[i], docname)
-    }
-    #print(c(docname, i))
-  }
-  correct_text <- paste0(words_vec, collapse = " ")
-  return(correct_text)
-}
-
 ########### Word-wised evaluation.############
 
+
+########### word-wise recall computation #####
 recall_words <- function(ground_truth_loc, prediction_loc){
   truth_files <- list.files(ground_truth_loc)
   pred_files <- list.files(prediction_loc)
@@ -33,6 +20,7 @@ recall_words <- function(ground_truth_loc, prediction_loc){
   return(correctnum/totaltruthnum)
 }
 
+########### word-wise precision computation #####
 precision_words <- function(ground_truth_loc, prediction_loc, tesseract_loc){
   truth_files <- list.files(ground_truth_loc)
   pred_files <- list.files(prediction_loc)
@@ -46,7 +34,6 @@ precision_words <- function(ground_truth_loc, prediction_loc, tesseract_loc){
     pred_vec <- strsplit(paste(pred_text, collapse = " "), split = " ")[[1]]
     intersect_vec <- vecsets::vintersect(truth_vec, pred_vec)
     correctnum <- correctnum + length(intersect_vec)
-    
     tess_text <- readLines(paste0(tesseract_loc, files[i]), warn = FALSE, encoding = "UTF-8")
     tess_vec <- strsplit(paste(tess_text, collapse = " "), split = " ")[[1]]
     totalOCRnum <- totalOCRnum + length(tess_vec)
@@ -56,6 +43,7 @@ precision_words <- function(ground_truth_loc, prediction_loc, tesseract_loc){
 
 ############ character-wise evaluation.######################
 
+########### character-wise recal computation ################
 recall_chars <- function(ground_truth_loc, prediction_loc){
   truth_files <- list.files(ground_truth_loc)
   pred_files <- list.files(prediction_loc)
@@ -85,6 +73,8 @@ recall_chars <- function(ground_truth_loc, prediction_loc){
   return(correct_char/total_truth_char)
 }
 
+
+########### character-wise precision computation ################
 precision_chars <- function(ground_truth_loc, prediction_loc, tesseract_loc){
   truth_files <- list.files(ground_truth_loc)
   pred_files <- list.files(prediction_loc)

@@ -23,9 +23,12 @@ detect_word <- function(token){
   return(if_garbage)
 }
 
+##input: a word vector; outpu: T/F vector for the word vector
 detect_wordvec <- function(wordvec){
   return(sapply(wordvec, detect_word))
 }
+
+
 
 ##input: a single file location; output: list of T/F vector. Each element is a vector of T/F for tokens detection on that line
 ##(TRUE -> token is garbage; FALSE -> token is not garbage)
@@ -41,8 +44,5 @@ detect_file <- function(single_file_loc){
     output_vec <- c(output_vec, output_list[[i]])
   }
   return(output_vec)
-  ######################################################
-  
-  
 }
 

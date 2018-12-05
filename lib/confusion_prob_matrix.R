@@ -1,6 +1,9 @@
 ##input truth text location, tesserat text location
 ##output confusion probability matrix
 
+
+#compute number of confusion when true letter_j is printed as letter_i
+#entry for confusion num matrix
 compute_num_confusion <- function(trueletter, printletter, truth_tk_loc, tess_tk_loc){
   file_names <- list.files(truth_tk_loc)
   sum_confusion <- 0
@@ -22,7 +25,7 @@ compute_num_confusion <- function(trueletter, printletter, truth_tk_loc, tess_tk
 }
 
 
-
+#compute number of true letter_j
 compute_num_trueletter <- function(trueletter, truth_tk_loc){
   file_names <- list.files(truth_tk_loc)
   total <- 0
@@ -36,7 +39,7 @@ compute_num_trueletter <- function(trueletter, truth_tk_loc){
   return(total)
 }
 
-
+#compute the confusion number matrix
 confusion_num_matrix <- function(truthtk_loc, tesstk_loc){
   mat <- matrix(0, nrow = d, ncol = d)
   for(i in 1:d){
