@@ -6,6 +6,6 @@ The data directory contains data used in the analysis. This is treated as read o
 
 In this project, there are two subfolders -- ground_truth and tesseract. Each folder contains 100 text files with same file names correspondingly.
 
-Subfolders -- ground_truth and tesseract have been aligned on lines. (Corresponding text files have same number of lines.)
+Subfolders ground_truth and tesseract have been aligned on lines. (Corresponding text files have same number of lines.)
 
 We add one more subfolders -- prediction. Folder prediction contains typo-corrected text files of first 10 text files of tesseract with same file names correspondingly.
