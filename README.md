@@ -11,7 +11,7 @@ Term: Fall 2018
 	+ Ghada Jerfel 
 	+ Peilin Li
 	+ Xiaoyi Li
-	+ Hengyang Lin
+	+ Hengyang Lin: hl3116
 	+ Zhibo Zhou
 
 + Project summary: In this project, we created an OCR post-processing procedure to enhance Tesseract OCR output.
