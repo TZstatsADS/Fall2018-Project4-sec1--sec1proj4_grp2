@@ -16,4 +16,4 @@ ground_truth_tk: Documents consisted of corresponding tokens with same length co
 ground_truth_tk: Documents consisted of corresponding tokens with same length compared to ground truth.
 (For confusion probability)
 
-.Rdata file: Some R ojbects that need much time to generate. We store them here and we load it directly in R code chunks when we need it.
+.Rdata file: Some R ojbects that need much time to generate. We store them here and we load it directly in R code chunks wherever we need it.
