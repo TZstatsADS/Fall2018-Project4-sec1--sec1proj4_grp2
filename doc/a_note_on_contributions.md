@@ -13,4 +13,4 @@ Sample project README statement.
 
 Project 4
 
-Please see Readme file outside.
+Please see README file outside.
