@@ -8,4 +8,4 @@ In main.Rmd, most chunks are set to eval = FALSE. You could just run those chunk
 
 In main.Rmd, the last chunk is about using iteration to improve our correction. This chunk is fully functionable but you may not want to run it because it would take very long time but the improvement of iteration is quite little.
 
-To see the structure and the effect of our project, as well as our explanations or ideas, please download the main.nb.html file and have a look.
+To see the structure and the effect of our project, as well as our explanations or ideas, please download the main.nb.html file and have a look first.
