@@ -136,6 +136,7 @@ for(i in 1:length(doc_name)){
 After tokens were paired, we have to abandon those corresponding tokens with different length.
 The reason to this is we didn't consider reading one letter to two or vice-versa in our confusion matrix.
 (The calculation of estimating error involving character alignment is very complicated.)
+
 **We need these non-space to non-space converting characters to estimate our confusion probability.**
 ```{r,eval=FALSE}
 ## Write those tokens with same length down in output files.
