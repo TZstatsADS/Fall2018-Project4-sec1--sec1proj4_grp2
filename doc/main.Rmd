@@ -410,8 +410,9 @@ knitr::kable(word_performance_table, caption="OCR performance: word-wise evaluat
 
 ## Character-wise evaluation
 
-Our correction function cannot help if OCR machine "breaks" one token as two or "combines" two tokens as one during reading. Though word-wise evaluation could still be easily implemented, **because we don't want to ignore the order of character, character-wise evaluation is very complicated if breaking or combining happens.** Under this situation, we need to use lines with same number of tokens
-as tesseract data to evaluate our correction character-wisely.
+Our correction function cannot help if OCR machine "breaks" one token as two or "combines" two tokens as one during reading.
+**Because we don't want to ignore the order of character, character-wise evaluation is very complicated if breaking or combining happens.**
+Under this situation, we need to use lines with same number of tokens as tesseract data to evaluate our correction character-wisely.
 
 Lines with same number of tokens have been written down at "../output/tesseract" file in Step1 -- preprocess.
 
