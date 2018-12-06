@@ -59,15 +59,13 @@ tesseract_doc_loc <- paste0(tesseract_file_loc, doc_name)
 source("../lib/preprocess.R")
 truth_lineNumber_vec <- sapply(truth_doc_loc, get_number_lines)
 tesseract_lineNumber_vec <- sapply(tesseract_doc_loc, get_number_lines)
-
 ## Get the names of documents which have different lines in truth and tesseract
 doc_diffLines_names <- doc_name[truth_lineNumber_vec != tesseract_lineNumber_vec]
-
 truth_lineNumber_vec[truth_lineNumber_vec != tesseract_lineNumber_vec]
 tesseract_lineNumber_vec[truth_lineNumber_vec != tesseract_lineNumber_vec]
 ```
-There are 0 files with different number of lines now.
 
+There are 0 files with different number of lines now.
 After manually adjusting, now all the correspoding documents have same number of lines.
 (There are 13 files needed to be adjusted in total.)
 
