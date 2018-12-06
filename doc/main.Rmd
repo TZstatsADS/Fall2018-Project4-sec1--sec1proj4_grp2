@@ -240,7 +240,6 @@ Each element represents a document, while the values of the vector are TRUE or F
 names of the vector are  tokens of the document.
 ```{r,eval=FALSE}
 source("../lib/detection.R")
-
 detection_list <- list()
 for(i in 1:length(doc_name)){
   ocr_fileloc <- paste0(tesseract_file_loc, doc_name[i])
@@ -275,7 +274,6 @@ save(lexicon, file = "../output/lexicon.Rdata")
 
 Each LDA model is trained by ground truth documents other than a specific document doc_i. Then this model is used to compute scores when
 we are correcting the corresponding tesseract of the specific document doc_i.
-
 ```{r,eval=FALSE}
 n_topics <- 5
 source("../lib/LDAlist.R")
