@@ -143,7 +143,6 @@ The reason to this is we didn't consider reading one letter to two or vice-versa
 ## Write those tokens with same length down in output files.
 truthline_loc <- paste0(output_loc, "ground_truth/")
 tessline_loc <- paste0(output_loc, "tesseract/")
-
 for(i in 1:length(doc_name)){
   truth_text <- readLines(paste0(truthline_loc, doc_name[i]), warn = FALSE, encoding = "UTF-8")
   tess_text <- readLines(paste0(tessline_loc, doc_name[i]), warn = FALSE, encoding = "UTF-8")
