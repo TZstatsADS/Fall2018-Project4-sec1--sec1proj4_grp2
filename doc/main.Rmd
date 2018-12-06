@@ -163,11 +163,11 @@ for(i in 1:length(doc_name)){
 ```
 
 ## Computating and Saving confusion matrix
+
+### 1. We care about A-Z, a-z, 0-9, and some common punctuations in our letterlist.
 ```{r,eval=FALSE}
 source("../lib/confusion_prob_matrix.R")
 ```
-
-### 1. We care about A-Z, a-z, 0-9, and some common punctuations in our letterlist.
 ```{r,eval=FALSE}
 lowerletters <- c("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
 upperletters <- toupper(lowerletters)
@@ -252,7 +252,6 @@ save(detection_list, file = "../output/detection_list.Rdata")
 
 Let's have a view at the second element of our ouput, which is the detection result of file "group1_00000010.txt"
 (TRUE indicates that the word is garbage; FALSE indicates that the word is clean.)
-
 ```{r}
 load("../output/detection_list.Rdata")
 head(detection_list$group1_00000010.txt, 50)
