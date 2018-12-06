@@ -29,7 +29,8 @@ h4 { /* Header 4 */
   color: Grey;
 }
 </style>
-# step0 : Load libraries {-}
+
+# step0 : Load libraries
 
 ```{r,warnings = FALSE}
 library(stringr)
