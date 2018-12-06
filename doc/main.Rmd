@@ -474,8 +474,9 @@ knitr::kable(performance_table, caption="OCR performance evaluation")
 
 # Step5: Use iteration to improve {-}
 
-As stated in the paper, we could use iteration to improve prediction. If a file was processed, then the processed file contains more correct words, which help to improve the topic model part, which means we could perform a new round of detection and correction on the
-processed file.
+As stated in the paper, we could use iteration to improve prediction.
+If a file was processed, then the processed file contains more correct words, which help to improve the topic model part.
+This means we could perform a new round of detection and correction on the processed file.
 
 **This could be easily implemented in our project if we just regard file prediction as file tesseract.**
 
