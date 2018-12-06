@@ -30,7 +30,7 @@ h4 { /* Header 4 */
 }
 </style>
 
-# Step0 : Load libraries
+# Step0: Load libraries
 ```{r,warnings = FALSE}
 library(stringr)
 library(topicmodels)
@@ -55,7 +55,6 @@ tesseract_doc_loc <- paste0(tesseract_file_loc, doc_name)
 ```
 
 ### 1. Make sure that corresponding documents have same number of lines. If not, adjust them manually.
-
 ```{r}
 source("../lib/preprocess.R")
 truth_lineNumber_vec <- sapply(truth_doc_loc, get_number_lines)
@@ -72,7 +71,6 @@ There are 0 files with different number of lines.
 After manually adjusting, now all the correspoding documents have same number of lines. (There are 13 files needed to be adjusted in total.)
 
 ### 2. After breaking every lines down, we need those lines with same number of tokens between ground truth and tesseract.
-
 The reason to do this for estimating confusion matrix, is that if OCR machine reads non-space character to space or vice versa, we are not able to pair tokens one-to-one, which makes the estimation very complicated.
 
 Let's compute the fraction of these lines, because we cannot abandon too many lines.
@@ -109,7 +107,6 @@ sum_sametokenline/sum_line
 About 88.7% of lines have same numbers of tokens, which are going to be used. It's acceptable.
 
 ### 3. Write those 88.7% lines with same number of tokens in two output files.
-
 ```{r,eval=FALSE}
 ## Get the logic which have the same number of tokens in truth and tesseract
 log_tokNumEq_list <- list()
@@ -138,7 +135,6 @@ for(i in 1:length(doc_name)){
 ```
 
 ### 4. Write those corresponding tokens with same number of characters down in two output files.
-
 After tokens were paired, we have to abandon those corresponding tokens with different length. The reason to this is we didn't consider reading one letter to two or vice-versa in our confusion matrix. (The calculation of estimating error involving character alignment is very complicated.)
 
 **We need these non-space to non-space converting characters to estimate our confusion probability.**
