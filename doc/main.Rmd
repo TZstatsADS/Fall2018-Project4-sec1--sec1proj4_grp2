@@ -476,7 +476,7 @@ This means we could perform a new round of detection and correction on the proce
 **This could be easily implemented in our project if we just regard file prediction as file tesseract.**
 
 To save time, we perform both word-wise and character-wise evaluation on data of lines with same number of tokens.
-data of lines with same number of tokens has been contained in outpu file.
+Data of lines with same number of tokens has been contained in output file.
 **Under this situation, the word-wise recall would be equal to word-wise precision.**
 
 We would not run this part because it takes too much time.
