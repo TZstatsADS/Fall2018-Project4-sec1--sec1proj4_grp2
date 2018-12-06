@@ -416,7 +416,6 @@ as tesseract data to evaluate our correction character-wisely.
 Lines with same number of tokens have been written down at "../output/tesseract" file in Step1 -- preprocess.
 
 ### 0. Run our detection algorithm on tesseract files at output file. Save the result of detection.
-
 ```{r,eval=FALSE}
 tesseract_loc_eval <- "../output/tesseract/"
 source("../lib/detection.R")
