@@ -68,11 +68,13 @@ tesseract_lineNumber_vec[truth_lineNumber_vec != tesseract_lineNumber_vec]
 ```
 There are 0 files with different number of lines now.
 
-After manually adjusting, now all the correspoding documents have same number of lines. (There are 13 files needed to be adjusted in total.)
+After manually adjusting, now all the correspoding documents have same number of lines.
+(There are 13 files needed to be adjusted in total.)
 
 ### 2. After breaking every lines down, we need those lines with same number of tokens between ground truth and tesseract.
 
-The reason to do this for estimating confusion matrix, is that if OCR machine reads non-space character to space or vice versa, we are not able to pair tokens one-to-one, which makes the estimation very complicated.
+The reason to do this for estimating confusion matrix, is that if OCR machine reads non-space character to space or vice versa, we are
+not able to pair tokens one-to-one, which makes the estimation very complicated.
 
 Let's compute the fraction of these lines, **because we cannot abandon too many lines.**
 
@@ -138,7 +140,9 @@ for(i in 1:length(doc_name)){
 
 ### 4. Write those corresponding tokens with same number of characters down in two output files.
 
-After tokens were paired, we have to abandon those corresponding tokens with different length. The reason to this is we didn't consider reading one letter to two or vice-versa in our confusion matrix. (The calculation of estimating error involving character alignment is very complicated.)
+After tokens were paired, we have to abandon those corresponding tokens with different length.
+The reason to this is we didn't consider reading one letter to two or vice-versa in our confusion matrix.
+(The calculation of estimating error involving character alignment is very complicated.)
 
 **We need these non-space to non-space converting characters to estimate our confusion probability.**
 ```{r,eval=FALSE}
@@ -205,7 +209,9 @@ save(trueletter_num_vec, file = "../output/trueletter_num_vec.Rdata")
 ```
 ### 4. see how many letters we are going to use to estimate the confusion probability.
 
-We compute the ratio of letters used in estimation over total true letters in our selected tokens. As a result, we can see almost all alphabets are used. However, some punctuations are not fully used.
+We compute the ratio of letters used in estimation over total true letters in our selected tokens.
+As a result, we can see almost all alphabets are used. However, some punctuations are not fully used.
+
 ```{r}
 load("../output/confusion_number_matrix.Rdata")
 load("../output/trueletter_num_vec.Rdata")
@@ -254,8 +260,8 @@ save(detection_list, file = "../output/detection_list.Rdata")
 ```
 
 Let's have a view at the second element of our ouput, which is the detection result of file "group1_00000010.txt"
-
 (TRUE indicates that the word is garbage; FALSE indicates that the word is clean.)
+
 ```{r}
 load("../output/detection_list.Rdata")
 head(detection_list$group1_00000010.txt, 50)
