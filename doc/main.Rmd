@@ -485,7 +485,8 @@ To save time, we perform both word-wise and character-wise evaluation on data of
 in outpu file.
 **Under this situation, the word-wise recall would be equal to word-wise precision.**
 
-We would not run this part because it takes too much time. Besides, according to experiments on several files, iteration here helps quite little.
+We would not run this part because it takes too much time.
+Besides, according to experiments on several files, iteration here helps quite little.
 ```{r, eval=FALSE}
 load("../output/confusion_probability_matrix.Rdata")
 load("../output/lexicon.Rdata")
