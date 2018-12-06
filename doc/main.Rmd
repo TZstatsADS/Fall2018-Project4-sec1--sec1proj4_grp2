@@ -364,7 +364,7 @@ cat(text)
 text <- readLines(paste0(file_loc,"ground_truth/",doc2), warn = FALSE, encoding = "UTF-8")
 cat(text)
 ```
-As we can see in the above, the first correction happened at second line ,where "1nterested" and "companles" were corrected as "interested" and "companies". 
+The first correction happened at second line ,where "1nterested" and "companles" were corrected as "interested" and "companies". 
 
 We can also find out that this method helps nothing at many typo words, since it could not correct tokens when number of characters
 changes nor three or more letters change.
