@@ -4,7 +4,7 @@ output: html_notebook
 ---
 
 Hengyang Lin  hl3116
-**GU4243/GR5243: Applied Data Science Project 4**
+
 
 <style type="text/css">
 h1.title {
@@ -29,6 +29,7 @@ h4 { /* Header 4 */
 }
 </style>
 
+**GU4243/GR5243: Applied Data Science, Project 4**
 
 # Step0: Load libraries
 ```{r, warnings = FALSE}
