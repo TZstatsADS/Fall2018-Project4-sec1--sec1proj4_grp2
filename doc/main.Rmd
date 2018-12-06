@@ -75,9 +75,7 @@ After manually adjusting, now all the correspoding documents have same number of
 
 The reason to do this for estimating confusion matrix, is that if OCR machine reads non-space character to space or vice versa, we are
 not able to pair tokens one-to-one, which makes the estimation very complicated.
-
 Let's compute the fraction of these lines, **because we cannot abandon too many lines.**
-
 ```{r}
 ## compute the fraction of lines which have the same number of tokens in truth and tesseract
 truth_tokenNum_list <- list()
@@ -99,12 +97,10 @@ for(i in 1:length(doc_name)){
 names(tesseract_tokenNum_list) <- doc_name
 
 sum_line <- sum(sapply(truth_tokenNum_list, length)) ## total number of lines
-
 sum_sametokenline <- 0
 for(i in 1:100){
   sum_sametokenline <- sum_sametokenline + sum(truth_tokenNum_list[[i]] == tesseract_tokenNum_list[[i]])
 }
-
 sum_sametokenline/sum_line
 ```
 
@@ -128,7 +124,6 @@ for(i in 1:length(doc_name)){
   text_vec <- text_vec_all[ind_sameTKnum]
   writeLines(text_vec, paste0(output_loc,"ground_truth/",doc_name[i]), useBytes = TRUE)
 }
-
 for(i in 1:length(doc_name)){
   doc <- paste0(tesseract_file_loc, doc_name[i])
   text_vec_all <- readLines(doc, warn = FALSE, encoding = "UTF-8")
@@ -143,7 +138,6 @@ for(i in 1:length(doc_name)){
 After tokens were paired, we have to abandon those corresponding tokens with different length.
 The reason to this is we didn't consider reading one letter to two or vice-versa in our confusion matrix.
 (The calculation of estimating error involving character alignment is very complicated.)
-
 **We need these non-space to non-space converting characters to estimate our confusion probability.**
 ```{r,eval=FALSE}
 ## Write those tokens with same length down in output files.
@@ -157,7 +151,6 @@ for(i in 1:length(doc_name)){
   tess_strsplit_list <- strsplit(tess_text, " ")
   truth_letternum_list <- lapply(truth_strsplit_list, nchar)
   tess_letternum_list <- lapply(tess_strsplit_list, nchar)
-  
   truetk_text <- c()
   tesstk_text <- c()
   for(j in 1:length(truth_letternum_list)){
@@ -207,11 +200,11 @@ for(k in 1:d){
 names(trueletter_num_vec) <- letterlist
 save(trueletter_num_vec, file = "../output/trueletter_num_vec.Rdata")
 ```
+
 ### 4. see how many letters we are going to use to estimate the confusion probability.
 
 We compute the ratio of letters used in estimation over total true letters in our selected tokens.
 As a result, we can see almost all alphabets are used. However, some punctuations are not fully used.
-
 ```{r}
 load("../output/confusion_number_matrix.Rdata")
 load("../output/trueletter_num_vec.Rdata")
@@ -247,7 +240,6 @@ we use a rule-based detection. The ouput is a list with 100 elements which are v
 
 Each element represents a document, while the values of the vector are TRUE or FALSE (Garbage -> True; Not Garbage -> False), and the
 names of the vector are  tokens of the document.
-
 ```{r,eval=FALSE}
 source("../lib/detection.R")
 
@@ -344,7 +336,6 @@ Candidates are: (here candidates are with right punctuation. The punctuations wo
 ```{r}
 lowercandidate_generate("prohlblt:", lexicon)
 ```
-
 Correction is: (here correction contains right punctuation ":")
 ```{r}
 correct_word("prohlblt:", "group1_00000005.txt")
@@ -376,25 +367,20 @@ cat(text)
 text <- readLines(paste0(file_loc,"ground_truth/",doc2), warn = FALSE, encoding = "UTF-8")
 cat(text)
 ```
-
 As we can see in the above, the first correction happened at second line ,where "1nterested" and "companles" were corrected as "interested" and "companies". 
 
 We can also find out that this method helps nothing at many typo words, since it could not correct tokens when number of characters
 changes nor three or more letters change.
 
-# Step4: Evaluate
-
-To save time, we use first 10 files to measure our correction performance.
+# Step4: Evaluate for the first 10 files 
 
 ## word-wise evaluation
 
 Since our algorithm takes upper case or lower case into consideration, and is able to correct them, we didn't convert text to lower case
 when we calculating recall or precision.
-
 So our recall and precision are more "strict" than those in starter codes.
 
 ### 1. Process first 10 files. Write down the prediction text in "../data/prediction" file.
-
 ```{r, eval=FALSE}
 load("../output/detection_list.Rdata")
 prediction_loc <- "../data/prediction/"
@@ -487,8 +473,7 @@ knitr::kable(char_performance_table, caption="OCR performance: character-wise ev
 Remember that we omitted those lines in which OCR machine breaking or combining tokens during reading happened, in another word we didn't consider the error that OCR machine reads a non-space character to space or vice-versa. 
 **So here character-wise precision and recall are both overestimated.**
 
-##  Evaluation
-
+##  Total Evaluation
 ```{r}
 performance_table <- rbind(word_performance_table,char_performance_table)
 knitr::kable(performance_table, caption="OCR performance evaluation")
