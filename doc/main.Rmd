@@ -73,6 +73,7 @@ After manually adjusting, now all the correspoding documents have same number of
 
 The reason to do this for estimating confusion matrix, is that if OCR machine reads non-space character to space or vice versa, we are
 not able to pair tokens one-to-one, which makes the estimation very complicated.
+
 Let's compute the fraction of these lines, **because we cannot abandon too many lines.**
 ```{r}
 ## compute the fraction of lines which have the same number of tokens in truth and tesseract
