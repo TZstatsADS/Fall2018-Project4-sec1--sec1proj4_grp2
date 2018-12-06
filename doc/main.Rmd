@@ -30,8 +30,7 @@ h4 { /* Header 4 */
 }
 </style>
 
-# step0 : Load libraries
-
+# Step0 : Load libraries
 ```{r,warnings = FALSE}
 library(stringr)
 library(topicmodels)
