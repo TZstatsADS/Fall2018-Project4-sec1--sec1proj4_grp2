@@ -394,7 +394,6 @@ source("../lib/evaluation.R")
 word_ground_truth_loc <- "../data/ground_truth/"
 word_prediction_loc <- "../data/prediction/"
 word_tesseract_loc <- "../data/tesseract/"
-
 word_performance_table <- data.frame("Before_Processing" = rep(NA,2), 
                                      "After_Processing" = rep(NA,2))
 row.names(word_performance_table) <- c("word_wise_recall", "word_wise_precision")
@@ -420,7 +419,6 @@ Lines with same number of tokens have been written down at "../output/tesseract"
 
 ```{r,eval=FALSE}
 tesseract_loc_eval <- "../output/tesseract/"
-
 source("../lib/detection.R")
 
 detection_list_eval <- list()
@@ -447,11 +445,9 @@ for(i in 1:length(docname_toeval)){
 ### 2. Visualization
 ```{r}
 source("../lib/evaluation.R")
-
 char_ground_truth_loc <- "../output/ground_truth/"
 char_prediction_loc <- "../output/prediction/"
 char_tesseract_loc <- "../output/tesseract/"
-
 char_performance_table <- data.frame("Before_Processing" = rep(NA,2), 
                                      "After_Processing" = rep(NA,2))
 row.names(char_performance_table) <- c("character_wise_recall", "character_wise_precision")
@@ -489,12 +485,10 @@ We would not run this part because it takes too much time. Besides, according to
 ```{r, eval=FALSE}
 load("../output/confusion_probability_matrix.Rdata")
 load("../output/lexicon.Rdata")
-
 extra <- 1 #One extra iterations
 pred_file_loc <- "../output/prediction/"
 
 pred_file_name <- list.files(pred_file_loc)
-
 performance_mat <- matrix(NA, nrow = 4, ncol = 2 + extra)
 col_names <- paste0("After_",0:(extra+1),"_times_processing")
 
@@ -505,7 +499,6 @@ row.names(performance_table) <- c("word_wise_recall", "word_wise_precision",
 
 performance_table[1:2, 1:2] <- word_performance_table
 performance_table[3:4, 1:2] <- char_performance_table
-
 for(I in 1:extra){
   #detection
   cur_detection_list <- list()
@@ -525,5 +518,6 @@ for(I in 1:extra){
   performance_table["character_wise_recall", I + 2] <- recall_chars("../output/ground_truth/", pred_file_loc)
   performance_table["character_wise_precision", I + 2] <- precision_chars("../output/ground_truth/", pred_file_loc, "../output/tesseract/")
 }
+
 knitr::kable(performance_table, caption="Evaluation in interations")
 ```
