@@ -235,7 +235,7 @@ save(confusion_prob_mat, file = "../output/confusion_probability_matrix.Rdata")
 
 # Step2: Detect Typo word
 
-we use a rule-based detection based on paper D-1 section 2-2.
+we use a rule-based detection based on paper D-1 sect 2-2, and one more that considers consonant followed by "l" as garbage's feature.
 The ouput is a list with 100 elements which are vectors. Each element represents a document.
 The values of the vectors are TRUE/FALSE (Garbage -> True; Not Garbage -> False). The names of the vectors are tokens of the document.
 ```{r,eval=FALSE}
@@ -264,7 +264,6 @@ head(detection_list$group1_00000010.txt, 50)
 ```{r,eval=FALSE}
 source("../lib/lexicon.R")
 dictionary_loc <- truth_file_loc
-#lexicon <- get_dictionary(dictionary_loc)
 lexicon <- get_trueitems(dictionary_loc)
 save(lexicon, file = "../output/lexicon.Rdata")
 ```
