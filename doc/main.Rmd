@@ -71,8 +71,8 @@ After manually adjusting, now all the correspoding documents have same number of
 
 ### 2. After breaking every lines down, we need those lines with same number of tokens between ground truth and tesseract.
 
-The reason to do this for estimating confusion matrix, is that if OCR machine reads non-space character to space or vice versa, we are
-not able to pair tokens one-to-one, which makes the estimation very complicated.
+The reason to do this for estimating confusion matrix, is that if OCR machine reads non-space character to space or vice versa,
+we are not able to pair tokens one-to-one, which makes the estimation very complicated.
 
 Let's compute the fraction of these lines, **because we cannot abandon too many lines.**
 ```{r}
@@ -235,10 +235,9 @@ save(confusion_prob_mat, file = "../output/confusion_probability_matrix.Rdata")
 
 # Step2: Detect Typo word
 
-we use a rule-based detection. The ouput is a list with 100 elements which are vectors.
-
-Each element represents a document, while the values of the vector are TRUE or FALSE (Garbage -> True; Not Garbage -> False), and the
-names of the vector are  tokens of the document.
+we use a rule-based detection based on paper D-1 section 2-2.
+The ouput is a list with 100 elements which are vectors. Each element represents a document.
+The values of the vectors are TRUE/FALSE (Garbage -> True; Not Garbage -> False). The names of the vectors are tokens of the document.
 ```{r,eval=FALSE}
 source("../lib/detection.R")
 detection_list <- list()
@@ -272,8 +271,8 @@ save(lexicon, file = "../output/lexicon.Rdata")
 
 ### 1. Get and save a model list consists of 100 LDA models. Set number of topics to 5.
 
-Each LDA model is trained by ground truth documents other than a specific document doc_i. Then this model is used to compute scores when
-we are correcting the corresponding tesseract of the specific document doc_i.
+Each LDA model is trained by ground truth documents other than a specific document doc_i.
+Then this model is used to compute scores when we are correcting the corresponding tesseract of the specific document doc_i.
 ```{r,eval=FALSE}
 n_topics <- 5
 source("../lib/LDAlist.R")
@@ -364,17 +363,14 @@ text <- readLines(paste0(file_loc,"ground_truth/",doc2), warn = FALSE, encoding 
 cat(text)
 ```
 The first correction happened at second line ,where "1nterested" and "companles" were corrected as "interested" and "companies". 
-
-We can also find out that this method helps nothing at many typo words, since it could not correct tokens when number of characters
-changes nor three or more letters change.
+This method could not correct tokens when the number of characters changes or three or more letters change.
 
 # Step4: Evaluate for the first 10 files 
 
 ## word-wise evaluation
 
-Since our algorithm takes upper case or lower case into consideration, and is able to correct them, we didn't convert text to lower case
-when we calculating recall or precision.
-So our recall and precision are more "strict" than those in starter codes.
+Our algorithm takes uppercase or lowercase into consideration, so we didn't convert text to lowercase during evaluation.
+This means our recall and precision are more "strict" than those in starter codes.
 
 ### 1. Process first 10 files. Write down the prediction text in "../data/prediction" file.
 ```{r, eval=FALSE}
@@ -430,7 +426,7 @@ names(detection_list_eval) <- doc_name
 save(detection_list_eval, file = "../output/detection_list_eval.Rdata")
 ```
 
-### 1. Run correction algorithm on first 10 tesseract files of output file. Write down the corrected text in prediction doc of output.
+### 1. Run correction on first 10 tesseract files of output file. Write down the corrected text in prediction doc of output.
 ```{r,eval=FALSE}
 prediction_loc_eval <- "../output/prediction/"
 load("../output/detection_list_eval.Rdata")
@@ -480,8 +476,8 @@ This means we could perform a new round of detection and correction on the proce
 
 **This could be easily implemented in our project if we just regard file prediction as file tesseract.**
 
-To save time, we perform both word-wise and character-wise evaluation on data of lines with same number of tokens, which are contained
-in outpu file.
+To save time, we perform both word-wise and character-wise evaluation on data of lines with same number of tokens.
+data of lines with same number of tokens has been contained in outpu file.
 **Under this situation, the word-wise recall would be equal to word-wise precision.**
 
 We would not run this part because it takes too much time.
