@@ -56,7 +56,7 @@ The lib directory contains various files with function definitions and code.
 
 -- correcting a word by the candidate with highest score.
 
--- correcting a text file.
+-- correcting a text file by correcting each token detected as typo.
 
 
 #### evaluation.R:   for evaluation of predictions
