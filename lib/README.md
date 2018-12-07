@@ -36,7 +36,7 @@ The lib directory contains various files with function definitions and code.
 
 #### lexicon.R:   for testing if a candidate is valid (belongs to the lexicon)
 
--- getting a long word vector, which stored as lexicon.
+-- getting a long word vector, which is going to be stored as the lexicon.
 
 
 #### lowercandidate_generate.R:  for generating possible correct words to a given typo
