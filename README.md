@@ -24,7 +24,7 @@ Term: Fall 2018
 
 + Project details, explanations and ideas: Please download doc/main.nb.html to view.
 
-+ Project performance:
++ Project performance: (for first 10 files)
 ![screenshot](figs/evaluation.png)
 
 **Contribution statement**: 
